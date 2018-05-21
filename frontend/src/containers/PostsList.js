@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom'
 
 class PostsList extends Component {
 
+	state = {
+		sort: 'date',
+	}
+
 	componentDidMount(){
 		const { category } = this.props.match.params
 		this.props.getPosts(category)
@@ -14,11 +18,33 @@ class PostsList extends Component {
 	      	const { category } = nextProps.match.params;
 	      	this.props.getPosts(category);
 	    }
-	 }
+	}
+
+	onChangeSort = sort => {
+		console.log(sort)
+	 	this.setState({ sort })
+	}
+
+	sortByDate = posts => {
+	 	return posts.sort( (a, b) => a.timestamp < b.timestamp )
+	}
+
+	sortByVotes = posts => {
+		return posts.sort( (a,b) => a.voteScore < b.voteScore )
+	}
 	
 	render() {
-		const { posts } = this.props
-		const { category } = this.props.match.params
+		let { posts } = this.props
+		let { category } = this.props.match.params
+
+
+		if( posts.length > 1 ) {
+			if(this.state.sort === 'date') {
+				posts = this.sortByDate(posts) 
+			} else {	 
+				posts = this.sortByVotes(posts)  
+			}
+		}
 
 	 	return (
 	 		<div className="list-posts mt-30">
@@ -26,6 +52,14 @@ class PostsList extends Component {
 					<Link className="" to={"/new-post"}>
 						<button className='button-light op-5 op-8-h'>New Post</button>
 					</Link>
+					<select
+						className='button-light ml-15 op-5 op-8-h'
+						style={{ 'height':'29px', 'width': '90px' }}
+						onChange={ e => this.onChangeSort(e.target.value) }
+					>
+						<option value='date'>Latest</option>
+						<option value='votes'>Votes</option>
+					</select>
 				</div>
 
 	 			{ posts.length > 0 ? 
