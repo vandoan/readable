@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { getCategories, getPosts, getPostsByCategories } from '../api'
-import { Switch, Route, withRouter } from  'react-router-dom'
+import { Switch, Route } from  'react-router-dom'
 import CommentForm from './CommentForm'
 import Header from '../components/Header'
 import PostsList from './PostsList'
@@ -10,10 +9,6 @@ import PostForm from './PostForm'
 
 
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

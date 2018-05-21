@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getCategories } from '../actions/categories'
-import { addPost, fetchCategories } from '../actions/posts'
+import { addPost } from '../actions/posts'
 
 
 class PostForm extends Component {

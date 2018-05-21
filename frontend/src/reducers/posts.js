@@ -1,4 +1,4 @@
-import { RECEIVE_POST, RECEIVE_POSTS, RECEIVE_COMMENTS} from '../actions/constants'
+import { RECEIVE_POST, RECEIVE_POSTS } from '../actions/constants'
 
 
 const posts = (state = {}, action) => {

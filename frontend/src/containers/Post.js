@@ -84,8 +84,8 @@ class Post extends Component {
 				<div className="comments mt-30">
 					<h2 className="op-9 mt-50"> Comments</h2>
 					{ comments.length > 0 && 
-						comments.map( (comment) => (
-							<div className="mt-25">
+						comments.map( comment => (
+							<div className="mt-25" key='post-{index}-{key}'>
 								<div className='line-dotted-blue mb-05 pb-05 wid-30p'></div>
 								<div className=''>{comment.body}</div>
 								<div className='fs-14'>- { comment.author }</div>

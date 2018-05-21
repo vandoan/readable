@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getPosts, votePostList } from '../actions/posts'
-import { voteComment } from '../actions/comments'
 import { Link } from 'react-router-dom'
 
 class PostsList extends Component {

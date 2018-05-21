@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link, Redirect } from 'react-router-dom'
-import { addComment, editComment, getComment } from '../actions/comments'
+import { Redirect } from 'react-router-dom'
+import { addComment, editComment } from '../actions/comments'
 
 
 class CommentForm extends Component {
@@ -105,15 +105,12 @@ class CommentForm extends Component {
 }
 
 
-const mapStateToProps = ({}) => ({
-})
-
 const mapDispatchToProps = dispatch => ({
 	addComment: comment => dispatch( addComment(comment) ),
 	editComment: comment => dispatch( editComment(comment) ),
 })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(CommentForm)
+export default connect(null, mapDispatchToProps)(CommentForm)
 
 

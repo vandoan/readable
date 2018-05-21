@@ -151,7 +151,6 @@ export const getComment = id => {
 
 
 export const getComments = id => {
-    console.log(id)
     return fetch( `${apiUrl}/posts/${id}/comments`, { headers: apiHeaders } )
     .then( response => response.json() )
     .then( data => data )
