@@ -17,12 +17,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App mb-60">
         <Header />
         <div className="container">
           <Switch>
             <Route exact path='/' component={ PostsList } />
-            <Route exact path='/edit-post' component={ PostForm } />
+            <Route exact path='/edit-post/:category' component={ PostForm } />
             <Route exact path='/edit-comment/:category' component={ CommentForm } />
             <Route exact path='/new-comment/:category' component={ CommentForm } />
             <Route exact path='/new-post' component={ PostForm } />

@@ -14,6 +14,7 @@ class PostForm extends Component {
 		if( editMode ) {
 			post = this.props.location.state
 		}
+		console.log(editMode)
 
 		this.state = {
 			editMode,
@@ -44,7 +45,7 @@ class PostForm extends Component {
 			author: this.state.author,
 			body: this.state.body,
 			category: this.state.category,
-			id: "{this.state.id}",
+			id: this.state.id,
 			title: this.state.title,
 			voteScore: 0,
 		}

@@ -19,6 +19,7 @@ class PostsList extends Component {
 	
 	render() {
 		const { posts } = this.props
+		const { category } = this.props.match.params
 
 	 	return (
 	 		<div className="list-posts mt-30">
@@ -44,14 +45,14 @@ class PostsList extends Component {
 								<div className="dis-ib">
 									<button 
 										className="br-4 bc-ini cur-poi op-3 op-7-h"
-										onClick={()=>this.props.votePostList(post.id, 'upVote')}
+										onClick={()=>this.props.votePostList(post.id, 'upVote', category )}
 									>
 									&uarr;
 									</button>
 									<span className='ml-05 mr-05'>{post.voteScore} votes</span>
 									<button 
 										className="br-4 bc-ini cur-poi op-3 op-7-h"
-										onClick={()=>this.props.votePostList(post.id, 'downVote')}
+										onClick={()=>this.props.votePostList(post.id, 'downVote', category )}
 									>
 									&darr;
 									</button>
@@ -77,7 +78,7 @@ const mapStateToProps = ({ posts }) => ({
 
 const mapDispatchToProps = dispatch => ({
 	getPosts: (category) => dispatch(getPosts(category)),
-	votePostList: (id, vote) => dispatch(votePostList(id, vote)),
+	votePostList: (id, vote, category) => dispatch(votePostList(id, vote, category)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostsList)

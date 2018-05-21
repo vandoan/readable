@@ -73,10 +73,10 @@ export const votePost = ( id, vote ) => {
 	}
 }
 
-export const votePostList = ( id, vote ) => {
+export const votePostList = ( id, vote, category ) => {
 	return dispatch => {
 		return API.votePost( id, vote )
-		.then( posts => API.getPosts()
+		.then( posts => API.getPosts(category)
 			.then( posts => dispatch({
 				type: RECEIVE_POSTS,
 				posts

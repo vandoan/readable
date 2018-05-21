@@ -1,22 +1,44 @@
-# Readable API Server
+# Udacity React: Readable Project
+The project is one that shows the complexity of React and Redux, and the site that is built is one similar to that of Reddit where you can vote, post, and comment on a number of things. Instructions are given for Macs and its terminal, so other machines do adjust accordingly. Current Mac version: 10.13.1.
 
-This is the starter project for the final assessment project for Udacity's Redux course where you will build a content and comment web app. Users will be able to post content to predefined categories, comment on their posts and other users' posts, and vote on posts and comments. Users will also be able to edit and delete posts and comments.
 
-This repository includes the code for the backend API Server that you'll use to develop and interact with the front-end portion of the project.
+## Up and Running
+### Git
+Pull down the repository to your machine via terminal: 
+_**git clone git@github.com:vandoan/readable.git**_
 
-## Start Developing
+Then, go into the folder:
+_**cd readable**_
 
-To get started developing right away:
+### Server and Front End
+The code breaks down into two components: the server and front end. The front end needs the server to be running in order for the site to work. 
+First, get the server running.
 
-* Install and start the API server
-    - `cd api-server`
-    - `npm install`
-    - `node server`
-* In another terminal window, use Create React App to scaffold out the front-end
-    - `create-react-app frontend`
-    - `cd frontend`
-    - `npm start`
+#### Server 
+From the top of the folder (/readable), move into the api-server folder:
+_**cd api-server**_
 
-## API Server
+Then, run the initial install: 
+_**npm install**_
 
-Information about the API server and how to use it can be found in its [README file](api-server/README.md).
+Finally, run the server! Viola: 
+_**node server**_
+
+Now, if you go to http://localhost:3001/, all the different requests for the server are displayed.
+
+
+#### Front End
+Switching gears, move into the frontend directory. Because the current terminal window is occupied with the server, open a new window: 
+_**cmd + t**_
+
+Back up a directory and then into the frontend: 
+_**cd ../frontend**_
+
+Run the initial install: 
+_**npm install**_
+
+Lastly, start the project:
+_**npm start**_
+
+
+ You're now good to go. 

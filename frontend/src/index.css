@@ -34,7 +34,8 @@ h2 	{ font-size: 1.8rem; }
 .lst-no { list-style-type: none; }
 .line-dotted-blue { border-top: dotted lightblue 1px; }
 
-.mb-05 { margin-bottom: 5px; }
+.mb-05 	{ margin-bottom: 5px; }
+.mb-60 	{ margin-bottom: 60px; }
 .ml-05 	{ margin-left: 5px; }
 .ml-15 	{ margin-left: 15px; }
 .mlr-auto { margin-left: auto; margin-right: auto; }

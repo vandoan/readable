@@ -63,8 +63,13 @@ class Post extends Component {
 						</button>
 					</div>
 					<div className="add-comment button dis-ib ml-15">
-						<Link to={{ pathname:`/new-comment/${post.category}`, state: post, edit: true }} >
+						<Link to={{ pathname:`/edit-post/${post.category}`, state: post, edit: true }} >
 							<button className='button-light fs-14 op-5 op-9-h'>
+								edit post
+							</button>
+						</Link>
+						<Link to={{ pathname:`/new-comment/${post.category}`, state: post, edit: true }} >
+							<button className='button-light fs-14 ml-15 op-5 op-9-h'>
 								new comment
 							</button>
 						</Link>
